@@ -21,6 +21,12 @@ export default defineApp(async (_req, ctx) => {
           href={asset(`/styles.css?revision=${revision}`)}
           rel="stylesheet"
         />
+        <link
+          href={asset(`/styles.css?revision=${revision}`)}
+          rel="stylesheet"
+        />
+        <link href="https://esm.sh/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+        <link href="/extra-aos-animations.css" rel="stylesheet" />
 
         {/* Web Manifest */}
         <link rel="manifest" href={asset("/site.webmanifest")} />
