@@ -53,7 +53,7 @@ export default function Hero() {
           alt="Outer space, far above the world. Planet earth is blue and there's nothing we can do."
           class="fixed"
         />
-        <animated.div class="text-stone-100 text-[9.95vw] fixed leading-none top-[-1vw]">
+        <animated.div class="text-stone-100 text-[10.45vw] tracking-tight fixed leading-none top-[-1vw]">
           2001: A Space Odyssey
         </animated.div>
         <animated.div

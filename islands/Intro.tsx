@@ -7,8 +7,8 @@ export default function Intro() {
   }, []);
 
   return (
-    <div
-      class="bg-[#0D0D0D] relative text-stone-100 text-3xl grid-cols-12 pt-8"
+    <section
+      class="bg-[#0D0D0D] relative text-stone-100 text-3xl pt-8 px-2"
       style={{
         boxShadow: `0 -1vw 50vw 10vw rgba(13, 13, 13, 1)`,
       }}
@@ -28,13 +28,11 @@ export default function Intro() {
         </p>
       </div>
       <img
-        data-aos="fade-up-discrete"
-        data-aos-duration="1000"
         src="/still-1.jpg"
-        class="mt-24 px-20 w-full max-w-[96rem] m-auto box-border"
+        class="mt-36 w-full max-w-[96rem] m-auto box-border"
         alt="We're floating in space"
         title="Ladies and gentlemen, we're floating in space"
       />
-    </div>
+    </section>
   );
 }
