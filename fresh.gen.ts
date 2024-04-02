@@ -3,8 +3,9 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
+import * as $AOSInitializer from "./islands/AOSInitializer.tsx";
+import * as $Hal from "./islands/Hal.tsx";
 import * as $Hero from "./islands/Hero.tsx";
-import * as $Intro from "./islands/Intro.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -12,8 +13,9 @@ const manifest = {
     "./routes/_app.tsx": $_app,
   },
   islands: {
+    "./islands/AOSInitializer.tsx": $AOSInitializer,
+    "./islands/Hal.tsx": $Hal,
     "./islands/Hero.tsx": $Hero,
-    "./islands/Intro.tsx": $Intro,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
