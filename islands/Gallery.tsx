@@ -56,7 +56,6 @@ function GalleryItem(
           data-aos-delay={index * 150}
           data-aos-offset={400}
           src={`/${imageName}`}
-          class="rounded"
         >
         </img>
       </button>
@@ -67,9 +66,9 @@ function GalleryItem(
 export default function Gallery() {
   return (
     <>
-      <section class="bg-[#0D0D0D] relative text-stone-100 text-3xl px-5">
+      <section class="bg-[#0D0D0D] relative text-stone-100 text-3xl px-16">
         <div
-          class="max-w-5xl m-auto py-24 grid grid-cols-1 md:grid-cols-3 gap-5"
+          class="max-w-6xl m-auto py-24 grid grid-cols-1 md:grid-cols-3 gap-5"
           id="gallery"
         >
           {IMAGES.map((image, index) => (
