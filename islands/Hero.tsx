@@ -51,10 +51,10 @@ export default function Hero() {
         <img
           src="/space.jpg"
           alt="Outer space, far above the world. Planet earth is blue and there's nothing we can do."
-          class="fixed"
+          class="fixed w-screen h-screen object-cover"
         />
-        <animated.div class="text-stone-100 text-[10.45vw] tracking-tight fixed leading-none top-[-1vw]">
-          2001: A Space Odyssey
+        <animated.div class="text-stone-100 text-[20vw] md:text-[10.45vw] tracking-tight fixed leading-[0.9] md:leading-none top-[-1vw]">
+          2001:<br class="md:hidden" /> A Space Odyssey
         </animated.div>
         <animated.div
           class="w-[10vw] h-[10vw] bg-[#D6CFCD] rounded-full fixed left-[calc(50%-5vw)]"
@@ -89,7 +89,7 @@ export default function Hero() {
         >
         </animated.div>
         <animated.div
-          class="w-[120vw] h-[120vw] bg-slate-900 rounded-full fixed left-[calc(50%-60vw)]"
+          class="w-[160vw] h-[160vw] left-[calc(50%-80vw)] md:w-[120vw] md:h-[120vw] md:left-[calc(50%-60vw)] bg-slate-900 rounded-full fixed "
           style={{
             top: scrollY.to((y) => {
               const duration = SCREENS;

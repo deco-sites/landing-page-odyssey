@@ -39,8 +39,8 @@ export default function Stats() {
   const chunksOfLeds = chunkArray(leds, 20);
   return (
     <section class="bg-[#0D0D0D] relative text-stone-100 text-3xl px-5">
-      <div class="max-w-5xl m-auto pt-24 grid grid-cols-12 gap-8 md:gap-16">
-        <figure class="col-span-12 md:col-span-7 min-h-full flex flex-col justify-center">
+      <div class="max-w-5xl m-auto grid md:grid-cols-12 gap-y-12 md:gap-16 pt-12 md:pt-24">
+        <figure class="col-span-12  md:col-span-7 md:min-h-full flex flex-col justify-center">
           <blockquote
             data-aos="fade-right"
             class="indent-16"
@@ -57,7 +57,7 @@ export default function Stats() {
             data-aos="fade-right"
             data-aos-anchor="#quote"
             data-aos-delay="150"
-            class="mt-8 text-stone-700"
+            class="mt-4 md:mt-8 text-stone-700"
           >
             — Stanley Kubrick, in a 1968{" "}
             <a
