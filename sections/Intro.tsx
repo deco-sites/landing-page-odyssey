@@ -9,7 +9,7 @@ export default function Intro() {
     >
       <div
         data-aos="fade-up-discrete"
-        class="max-w-6xl m-auto md:text-center px-16"
+        class="max-w-6xl m-auto md:text-center px-5 md:px-16"
       >
         <p>
           The epic science fiction film produced and directed by Stanley Kubrick
