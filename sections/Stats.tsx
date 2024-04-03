@@ -1,4 +1,4 @@
-import { VNode } from "preact";
+import { ComponentType } from "preact";
 
 const rectStyle = "h-20 w-full";
 
@@ -18,9 +18,9 @@ function Off() {
   return <div class={`bg-stone-900 ${rectStyle}`} />;
 }
 
-// Split the array into chunks
-const chunkArray = (array: Array<VNode>, size: number) => {
-  return array.reduce((chunks: VNode[][], item, index) => {
+// Split array into chunks
+const chunkArray = (array: ComponentType[], size: number) => {
+  return array.reduce((chunks: ComponentType[][], item, index) => {
     if (index % size === 0) {
       chunks.push([item]);
     } else {
@@ -33,18 +33,18 @@ const chunkArray = (array: Array<VNode>, size: number) => {
 export default function Stats() {
   const numberOfLedsOn = 29;
   const leds = [
-    ...Array(numberOfLedsOn).fill(On()),
-    ...Array(100 - numberOfLedsOn).fill(Off()),
+    ...Array(numberOfLedsOn).fill(On),
+    ...Array(100 - numberOfLedsOn).fill(Off),
   ];
   const chunksOfLeds = chunkArray(leds, 20);
   return (
-    <div class="bg-[#0D0D0D] relative text-stone-100 text-3xl px-5">
-      <div class="max-w-5xl m-auto py-24 grid grid-cols-12 gap-8 md:gap-16">
+    <section class="bg-[#0D0D0D] relative text-stone-100 text-3xl px-5">
+      <div class="max-w-5xl m-auto pt-24 grid grid-cols-12 gap-8 md:gap-16">
         <figure class="col-span-12 md:col-span-7 min-h-full flex flex-col justify-center">
           <blockquote
             data-aos="fade-right"
-            data-aos-duration="1000"
             class="indent-16"
+            id="quote"
           >
             <i>2001</i>{" "}
             is a nonverbal experience; out of two hours and nineteen minutes of
@@ -55,8 +55,8 @@ export default function Stats() {
           </blockquote>
           <figcaption
             data-aos="fade-right"
-            data-aos-duration="1000"
-            data-aos-delay="300"
+            data-aos-anchor="#quote"
+            data-aos-delay="150"
             class="mt-8 text-stone-700"
           >
             — Stanley Kubrick, in a 1968{" "}
@@ -69,11 +69,14 @@ export default function Stats() {
             </a>
           </figcaption>
         </figure>
-        <figure class="col-span-12 md:col-span-5 flex flex-col gap-2">
-          {chunksOfLeds.map((chunk: VNode[]) => {
+        <figure
+          data-aos="fade"
+          class="col-span-12 md:col-span-5 flex flex-col gap-2"
+        >
+          {chunksOfLeds.map((chunk: ComponentType[]) => {
             return (
               <div class="flex gap-2">
-                {chunk}
+                {chunk.map((Element) => <Element />)}
               </div>
             );
           })}
@@ -83,6 +86,6 @@ export default function Stats() {
           </figcaption>
         </figure>
       </div>
-    </div>
+    </section>
   );
 }
