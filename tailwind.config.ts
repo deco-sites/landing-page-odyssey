@@ -9,7 +9,8 @@ export default {
     extend: {
       animation: {
         sliding: "sliding 30s linear infinite",
-        blink: "blink 2s infinite",
+        blink: "blink 1s step-end infinite",
+        typing: "3.5s steps(40, end)",
       },
       keyframes: {
         sliding: {
@@ -18,20 +19,18 @@ export default {
         },
         blink: {
           "0%": {
-            opacity: "0.6",
-          },
-          "33%": {
-            opacity: "1",
+            opacity: "0",
           },
           "50%": {
-            opacity: "0.6",
-          },
-          "66%": {
             opacity: "1",
           },
           "100%": {
-            opacity: "0.6",
+            opacity: "0",
           },
+        },
+        keyframes: {
+          "0%": { width: 0 },
+          "100%": { width: "100%" },
         },
       },
     },

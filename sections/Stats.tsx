@@ -15,7 +15,7 @@ function On() {
 }
 
 function Off() {
-  return <div class={`bg-stone-900 ${rectStyle}`} />;
+  return <div class={`bg-[#FCDCAD] opacity-5 ${rectStyle}`} />;
 }
 
 // Split array into chunks
@@ -57,13 +57,13 @@ export default function Stats() {
             data-aos="fade-right"
             data-aos-anchor="#quote"
             data-aos-delay="150"
-            class="mt-4 md:mt-8 text-stone-700"
+            class="mt-4 md:mt-8 text-neutral-700"
           >
             — Stanley Kubrick, in a 1968{" "}
             <a
               href="http://dpk.io/kubrick#:~:text=2001%20is%20a%20nonverbal%20experience,an%20emotional%20and%20philosophic%20content."
               target="_blank"
-              class="underline underline-offset-4 decoration-2 hover:text-stone-500 transition-colors duration-500"
+              class="underline underline-offset-4 decoration-2 hover:text-neutral-500 transition-colors duration-500"
             >
               interview with Eric Nordern for Playboy magazine
             </a>
@@ -81,8 +81,7 @@ export default function Stats() {
             );
           })}
           <figcaption class="text-sm font-mono uppercase text-right">
-            00<span class="animate-blink">:</span>40 /
-            02<span class="animate-blink">:</span>19 ~ {numberOfLedsOn}%
+            00:40 / 02:19 ≈ {numberOfLedsOn}% of the film
           </figcaption>
         </figure>
       </div>

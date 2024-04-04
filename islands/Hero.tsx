@@ -116,7 +116,7 @@ export default function Hero() {
       </div>
       <div class="relative">
         <div
-          class="h-[50vh] mt-[-50vh]"
+          class="h-[25vh] mt-[-25vh]"
           style={{
             background:
               "linear-gradient(to top, rgba(13,13,13,1) 25%, rgba(13,13,13,0) 100%)",
