@@ -51,13 +51,13 @@ function MessageLine({ message }: { message: Message }) {
   if (message.user == "Hal") {
     return (
       <div>
-        {`❯ ${message.text}`}
+        {`> ${message.text}`}
       </div>
     );
   } else {
     return (
       <div class="text-right">
-        {`${message.text} ❮`}
+        {`${message.text} <`}
       </div>
     );
   }
@@ -137,7 +137,7 @@ function Console() {
   };
   return (
     <label>
-      <div class="font-mono uppercase text-sm flex flex-col h-full tracking-normal">
+      <div class="font-console uppercase text-[0.625rem] leading-relaxed flex flex-col h-full tracking-normal">
         <div class="flex-grow flex-col-reverse flex overflow-scroll h-full gap-2 relative border-b border-neutral-600 pb-4">
           <div
             class="top-0 left-0 right-0 h-14 bg-red-200 absolute"
@@ -159,7 +159,7 @@ function Console() {
           <input
             type="text"
             placeholder="Click here to answer"
-            class="w-full bg-transparent outline-none placeholder:text-neutral-700 uppercase"
+            class="w-full bg-transparent outline-none placeholder:text-neutral-600 uppercase"
           />
           <button class="shrink-0 uppercase">⏎ confirm</button>
         </form>
@@ -250,13 +250,13 @@ export default function Hal() {
             </a>
           </div>
         </div>
-        <div class="mt-16">
+        <div class="mt-20">
           <HalPicture />
         </div>
         <div
           data-aos="fade-up-discrete"
           data-aos-offset="140"
-          class="mt-16 w-full max-w-md h-52 rounded-xl p-[1px]"
+          class="mt-20 w-full max-w-lg h-56 rounded-xl p-[1px]"
           style={{
             background: `
                linear-gradient(165deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)),

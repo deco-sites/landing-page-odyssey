@@ -49,9 +49,9 @@ export default function Intro() {
           alt="Still from 2001: A Space Oddity with an astronaut floating inside a space ship"
           title="Ladies and gentlemen, we're floating in space"
         />
-        <div class="text-xs font-mono tracking-normal mt-2 text-neutral-700 uppercase text-right">
-          Still from the 8K 70mm re-release of the film © Courtesy of Warner
-          Bros
+        <div class="text-xs font-mono tracking-normal mt-2 text-neutral-600 uppercase text-right">
+          Still from the 8K 70mm re-release of the film / Courtesy of Warner
+          Bros ©
         </div>
       </div>
     </section>

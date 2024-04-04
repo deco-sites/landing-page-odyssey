@@ -57,7 +57,7 @@ export default function Stats() {
             data-aos="fade-right"
             data-aos-anchor="#quote"
             data-aos-delay="150"
-            class="mt-4 md:mt-8 text-neutral-700"
+            class="mt-4 md:mt-8 text-neutral-600"
           >
             — Stanley Kubrick, in a 1968{" "}
             <a
@@ -80,7 +80,7 @@ export default function Stats() {
               </div>
             );
           })}
-          <figcaption class="text-xs font-mono uppercase text-right text-neutral-700 tracking-normal">
+          <figcaption class="text-xs font-mono uppercase text-right text-neutral-600 tracking-normal">
             ≈{numberOfLedsOn}% of screen time has dialog, the rest is
             imagery-only
           </figcaption>

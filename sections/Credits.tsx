@@ -5,7 +5,15 @@ const people: Person[] = [
   { title: "In", names: ["Super Panvision®", "Metrocolor"] },
   { title: "Designed and programmed by", names: ["João Pesce"] },
   { title: "Powered by", names: ["deco.cx", "deno", "fresh", "preact"] },
-  { title: "Typography", names: ["Inter", "Sofia Sans Extra Condensed"] },
+  {
+    title: "Typography",
+    names: [
+      "Inter",
+      "Sofia Sans Extra Condensed",
+      "Space Mono",
+      "Press Start 2P",
+    ],
+  },
 ];
 
 type Person = {

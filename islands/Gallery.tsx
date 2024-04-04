@@ -110,7 +110,7 @@ export default function Gallery() {
             data-aos-anchor="#gallery"
             data-aos-delay={(IMAGES.length + 1) * 150}
             data-aos-offset={400}
-            class="text-xs font-mono uppercase text-right text-neutral-700 tracking-normal mt-3"
+            class="text-xs font-mono uppercase text-right text-neutral-600 tracking-normal mt-3"
           >
             View sources
             <a href="https://imgur.com/a/Lvnsx8X" target="_blank">【1】</a>

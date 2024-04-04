@@ -10,6 +10,8 @@ export default {
       fontFamily: {
         condensed: ['"Sofia Sans Extra Condensed"', "sans-serif"],
         sans: ['"Inter"', "sans-serif"],
+        mono: ['"Space Mono"', "mono"],
+        console: ['"Press Start 2P"', "mono"],
       },
       animation: {
         sliding: "sliding 30s linear infinite",

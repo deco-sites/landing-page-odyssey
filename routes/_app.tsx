@@ -34,7 +34,7 @@ export default defineApp(async (_req, ctx) => {
           crossorigin="true"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap"
+          href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Inter:wght@100..900&family=Press+Start+2P&family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
           rel="stylesheet"
         />
 
