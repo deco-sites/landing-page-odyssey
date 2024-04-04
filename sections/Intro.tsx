@@ -1,7 +1,7 @@
 export default function Intro() {
   return (
     <section
-      class="bg-[#0D0D0D] relative text-stone-100 text-3xl pt-8 "
+      class="bg-[#0D0D0D] relative text-stone-100 text-4xl tracking-[-0.03em] font-[480] pt-8 "
       style={{
         boxShadow: `0 -1vw 50vw 10vw rgba(13, 13, 13, 1)`,
         perspective: "1px",
@@ -9,7 +9,7 @@ export default function Intro() {
     >
       <div
         data-aos="fade-up-discrete"
-        class="max-w-6xl m-auto md:text-center px-5 md:px-16"
+        class="max-w-5xl m-auto md:text-center px-5 md:px-16"
       >
         <p>
           The epic science fiction film produced and directed by Stanley Kubrick

@@ -7,6 +7,10 @@ export default {
   theme: {
     container: { center: true },
     extend: {
+      fontFamily: {
+        condensed: ['"Sofia Sans Extra Condensed"', "sans-serif"],
+        sans: ['"Inter"', "sans-serif"],
+      },
       animation: {
         sliding: "sliding 30s linear infinite",
         blink: "blink 1s step-end infinite",

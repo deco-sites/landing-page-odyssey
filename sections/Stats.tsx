@@ -38,7 +38,7 @@ export default function Stats() {
   ];
   const chunksOfLeds = chunkArray(leds, 20);
   return (
-    <section class="bg-[#0D0D0D] relative text-stone-100 text-3xl px-5 md:px-16">
+    <section class="bg-[#0D0D0D] relative text-stone-100 text-3xl tracking-[-0.03em] font-[480] px-5 md:px-16">
       <div class="max-w-6xl m-auto grid md:grid-cols-12 gap-y-12 md:gap-16 pt-12 md:pt-24">
         <figure class="col-span-12  md:col-span-7 md:min-h-full flex flex-col justify-center">
           <blockquote
@@ -80,7 +80,7 @@ export default function Stats() {
               </div>
             );
           })}
-          <figcaption class="text-sm font-mono uppercase text-right">
+          <figcaption class="text-sm font-mono uppercase text-right leading-none">
             00:40 / 02:19 ≈ {numberOfLedsOn}% of the film
           </figcaption>
         </figure>

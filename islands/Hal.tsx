@@ -94,6 +94,9 @@ function Console() {
     const form = event.target as HTMLFormElement;
     const input = form.getElementsByTagName("input")[0];
     const value = input.value;
+    const button = form.getElementsByTagName("button")[0];
+    button.style.color = "#404040";
+    button.disabled = true;
     input.value = "";
     const newMessage: Message = {
       user: "Human",
@@ -126,26 +129,36 @@ function Console() {
         `I’m sorry ${humanName}, I don’t have enough information about this.`,
       );
     }
+    button.disabled = false;
+    button.style.color = "#F5F5F4";
   };
   return (
     <label>
-      <div class="font-mono uppercase text-sm flex flex-col h-full">
-        <div class="flex-grow flex-col-reverse flex overflow-scroll h-full gap-2">
+      <div class="font-mono uppercase text-sm flex flex-col h-full tracking-normal">
+        <div class="flex-grow flex-col-reverse flex overflow-scroll h-full gap-2 relative border-b border-neutral-600 pb-4">
+          <div
+            class="top-0 left-0 right-0 h-14 bg-red-200 absolute"
+            style={{
+              background:
+                "linear-gradient(to top, rgba(13, 13, 13, 0), rgba(13, 13, 13, 0.75), rgba(13, 13, 13, 1))",
+            }}
+          >
+          </div>
           {messages.value.slice().reverse().map((item) => {
             return <MessageLine message={item} />;
           })}
         </div>
         <form
-          class="flex mt-4 select-none border-t border-neutral-600 py-4"
+          class="flex select-none  py-4 transition"
           onSubmit={onSubmit}
         >
           <span>{"$"}&nbsp;</span>
           <input
             type="text"
-            placeholder="Click here to type"
+            placeholder="Click here to answer"
             class="w-full bg-transparent outline-none placeholder:text-neutral-700 uppercase"
           />
-          <button class="shrink-0">⏎ PRESS ENTER</button>
+          <button class="shrink-0 uppercase">⏎ confirm</button>
         </form>
       </div>
     </label>
@@ -202,33 +215,33 @@ function HalPicture() {
 
 export default function Hal() {
   return (
-    <section class="bg-[#0D0D0D] relative text-stone-100 text-4xl px-5 md:px-16">
+    <section class="bg-[#0D0D0D] relative text-stone-100 text-4xl tracking-[-0.03em] font-[480] px-5 md:px-16">
       <div class="max-w-6xl m-auto py-24 flex flex-col items-center">
         <div
           data-aos="fade-up-discrete"
           id="hal9000text"
         >
           <h2 class="text-center">HAL9000 Supercomputer</h2>
-          <span class="font-extralight text-2xl text-center mt-4">
+          <div class="font-light text-2xl tracking-[-0.02em] text-center mt-3">
             Totally psychologically balanced. Definitely not murderous.
-          </span>
+          </div>
           <div
             data-aos="fade-up-discrete"
             data-aos-anchor="#hal9000text"
             data-aos-delay="150"
-            class="flex items-center gap-4 justify-center mt-5"
+            class="flex items-center gap-4 justify-center mt-6"
           >
             <a
               href="https://www.apple.com/"
               target="_blank"
-              class="py-[0.625rem] px-5 bg-stone-100 hover:bg-white text-stone-900 rounded-full text-base select-none"
+              class="py-[0.625rem] px-5 bg-stone-100 hover:bg-white text-stone-900 rounded-full text-base select-none tracking-[-0.01em]"
             >
               Learn more
             </a>
             <a
-              href="https://www.apple.com/"
+              href="https://www.apple.com/iphone-15-pro/"
               target="_blank"
-              class="py-[0.625rem] px-5 text-stone-100 hover:bg-stone-0 border border-stone-100 rounded-full text-base select-none"
+              class="py-[0.625rem] px-5 text-stone-100 hover:bg-stone-0 border border-stone-100 rounded-full text-base select-none tracking-[-0.01em]"
             >
               Buy
             </a>

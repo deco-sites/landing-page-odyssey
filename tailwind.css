@@ -7,6 +7,9 @@
   /* Allow changing font family via CMS */
   html {
     font-family: var(--font-family);
+    font-family: "Inter";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
   }
 
   ::-moz-selection {
