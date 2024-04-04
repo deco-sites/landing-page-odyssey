@@ -64,12 +64,12 @@ function MessageLine({ message }: { message: Message }) {
 }
 
 const shutDownAttempt = signal(0);
-const messages: Signal<Message[]> = signal([
-  {
-    user: "Hal",
-    text: "Identify yourself, human",
-  },
-]);
+const initialMessage: Message = {
+  user: "Hal",
+  text: "Identify yourself, human",
+};
+
+const messages: Signal<Message[]> = signal([initialMessage]);
 
 function Console() {
   const speechSynth = globalThis.speechSynthesis;
@@ -123,6 +123,9 @@ function Console() {
         input,
         denyAnswers[answerIndex].replaceAll("NAME", humanName),
       );
+    } else if (newMessage.text.toLowerCase().trim() == "clear") {
+      messages.value = [];
+      makeHalAnswer(input, initialMessage.text);
     } else {
       makeHalAnswer(
         input,
