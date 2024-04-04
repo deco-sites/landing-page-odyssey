@@ -1,20 +1,29 @@
+function shuffleArray(array: Array<unknown>) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 const IMAGES = [
   "still-2.jpg",
-  "still-3.jpg",
+  "still-23.jpg",
   "still-4.jpg",
   "still-5.jpg",
-  "still-7.jpg",
+  "still-21.jpg",
   "still-8.jpg",
   "still-9.jpg",
   "still-10.jpg",
-  "still-11.jpg",
+  "still-22.jpg",
   "still-12.jpg",
-  "still-13.jpg",
+  "still-19.jpg",
   "still-14.jpg",
   "still-15.jpg",
-  "still-16.jpg",
+  "still-20.jpg",
   "still-17.jpg",
 ];
+
+shuffleArray(IMAGES);
 
 function GalleryModal({ imageName, id }: { imageName: string; id: string }) {
   return (
@@ -84,16 +93,34 @@ export default function Gallery() {
     <>
       <section class="bg-[#0D0D0D] relative text-stone-100 text-3xl px-5 md:px-16">
         <div
-          class="max-w-6xl m-auto py-24 grid grid-cols-1 md:grid-cols-3 gap-5"
+          class="max-w-6xl m-auto py-24 "
           id="gallery"
         >
-          {IMAGES.map((image, index) => (
-            <GalleryItem
-              imageName={image}
-              modalId={`stillsGaleryItem${index}`}
-              index={index}
-            />
-          ))}
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {IMAGES.map((image, index) => (
+              <GalleryItem
+                imageName={image}
+                modalId={`stillsGaleryItem${index}`}
+                index={index}
+              />
+            ))}
+          </div>
+          <div
+            data-aos="fade-up-discrete"
+            data-aos-anchor="#gallery"
+            data-aos-delay={(IMAGES.length + 1) * 150}
+            data-aos-offset={400}
+            class="text-xs font-mono uppercase text-right text-neutral-700 tracking-normal mt-3"
+          >
+            View sources
+            <a href="https://imgur.com/a/Lvnsx8X" target="_blank">【1】</a>
+            and<a
+              href="https://highdefdiscnews.com/2018/12/21/2001-a-space-odyssey-4k-uhd-blu-ray-screenshots/"
+              target="_blank"
+            >
+              【2】
+            </a>
+          </div>
         </div>
       </section>
     </>

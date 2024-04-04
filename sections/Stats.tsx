@@ -71,7 +71,7 @@ export default function Stats() {
         </figure>
         <figure
           data-aos="fade"
-          class="col-span-12 md:col-span-5 flex flex-col gap-2"
+          class="col-span-12 md:col-span-5 flex flex-col gap-3"
         >
           {chunksOfLeds.map((chunk: ComponentType[]) => {
             return (
@@ -80,8 +80,9 @@ export default function Stats() {
               </div>
             );
           })}
-          <figcaption class="text-sm font-mono uppercase text-right leading-none">
-            00:40 / 02:19 ≈ {numberOfLedsOn}% of the film
+          <figcaption class="text-xs font-mono uppercase text-right text-neutral-700 tracking-normal">
+            ≈{numberOfLedsOn}% of screen time has dialog, the rest is
+            imagery-only
           </figcaption>
         </figure>
       </div>

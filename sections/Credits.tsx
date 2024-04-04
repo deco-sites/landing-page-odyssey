@@ -40,7 +40,7 @@ export default function Credits() {
         fontVariationSettings: '"wdth" 62.5',
       }}
     >
-      <div class="max-w-5xl m-auto pt-16 pb-52 flex gap-x-2 justify-center flex-wrap">
+      <div class="max-w-5xl m-auto pt-16 pb-48 flex gap-x-2 justify-center flex-wrap">
         {people.map((person) => <Person {...person} />)}
       </div>
     </section>
