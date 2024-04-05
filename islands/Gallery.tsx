@@ -31,7 +31,7 @@ function GalleryModal({ imageName, id }: { imageName: string; id: string }) {
   return (
     <dialog id={id} className="modal">
       <div className="modal-box rounded-none w-screen max-w-none max-h-none p-0 relative">
-        <img src={`${imageName}`} loading="lazy" fetchPriority="low"/>
+        <img src={`${imageName}`} loading="lazy" />
       </div>
       <button class="btn btn-circle btn-outline fixed top-6 right-6 text-stone-100 opacity-75">
         <svg

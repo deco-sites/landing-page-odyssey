@@ -41,14 +41,15 @@ export default function Stats() {
             data-aos-delay="150"
             class="mt-4 md:mt-8 text-neutral-600"
           >
-            — Stanley Kubrick, in a 1968{" "}
+            — Stanley Kubrick, in an{"  "}
             <a
               href="http://dpk.io/kubrick#:~:text=2001%20is%20a%20nonverbal%20experience,an%20emotional%20and%20philosophic%20content."
               target="_blank"
               class="underline underline-offset-4 decoration-2 hover:text-neutral-500 transition-colors duration-500"
             >
-              interview with Eric Nordern for Playboy magazine
-            </a>
+              interview with Eric Nordern
+            </a>{" "}
+            for Playboy magazine (1968)
           </figcaption>
         </figure>
         <figure
