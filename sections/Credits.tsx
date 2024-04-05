@@ -1,10 +1,34 @@
 const people: Person[] = [
-  { title: "Produced and directed by", names: ["Stanley Kubrick"] },
-  { title: "Starring", names: ["Keir Dullea", "Gary Lockwood"] },
-  { title: "Screenplay by", names: ["Stanley Kubrick", "Arthur C. Clarke"] },
-  { title: "In", names: ["Super Panvision®", "Metrocolor"] },
-  { title: "Designed and programmed by", names: ["João Pesce"] },
-  { title: "Powered by", names: ["deco.cx", "deno", "fresh", "preact"] },
+  {
+    title: "Produced and directed by",
+    names: ["Stanley Kubrick"],
+    cursor: "cursor-clapperboard",
+  },
+  {
+    title: "Starring",
+    names: ["Keir Dullea", "Gary Lockwood"],
+    cursor: "cursor-stars",
+  },
+  {
+    title: "Screenplay by",
+    names: ["Stanley Kubrick", "Arthur C. Clarke"],
+    cursor: "cursor-writing",
+  },
+  {
+    title: "In",
+    names: ["Super Panvision®", "Metrocolor"],
+    cursor: "cursor-camera",
+  },
+  {
+    title: "Designed and programmed by",
+    names: ["João Pesce"],
+    cursor: "cursor-technologist",
+  },
+  {
+    title: "Powered by",
+    names: ["deco.cx", "deno", "fresh", "preact"],
+    cursor: "cursor-tubes",
+  },
   {
     title: "Typography",
     names: [
@@ -13,12 +37,14 @@ const people: Person[] = [
       "Space Mono",
       "Press Start 2P",
     ],
+    cursor: "cursor-abc",
   },
 ];
 
 type Person = {
   title: string;
   names: string[];
+  cursor?: string;
 };
 
 function joinNames(names: string[]) {
@@ -31,9 +57,9 @@ function joinNames(names: string[]) {
     </>
   ));
 }
-function Person({ title, names }: Person) {
+function Person({ title, names, cursor }: Person) {
   return (
-    <span>
+    <span class={cursor}>
       <span class="text-[1.25rem] leading-none mr-1">{title}</span>
       <span class="text-[2.75rem] leading-none">{joinNames(names)}</span>
     </span>
