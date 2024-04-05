@@ -116,7 +116,7 @@ export default function Gallery() {
             data-aos-offset={400}
             class="text-xs font-mono uppercase text-right text-neutral-600 tracking-normal mt-3"
           >
-            View sources
+            Sources
             <a href="https://imgur.com/a/Lvnsx8X" target="_blank">【1】</a>
             and<a
               href="https://highdefdiscnews.com/2018/12/21/2001-a-space-odyssey-4k-uhd-blu-ray-screenshots/"
