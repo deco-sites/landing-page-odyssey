@@ -1,3 +1,5 @@
+import Image from "apps/website/components/Image.tsx";
+
 export default function Intro() {
   return (
     <section
@@ -43,11 +45,14 @@ export default function Intro() {
         </div>
       </div>
       <div data-aos="fade" class="px-5 max-w-[96rem] m-auto">
-        <img
-          src="/still-1.jpg"
+        <Image
+          src="https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/4946/b8602e40-6df2-4ad5-84e0-24659a33ae5d"
           class="mt-12 h-[100vw] max-w-full md:h-auto object-cover md:mt-36 w-full  box-border"
           alt="Still from 2001: A Space Oddity with an astronaut floating inside a space ship"
           title="Ladies and gentlemen, we're floating in space"
+          width={1496}
+          height={688}
+          fetchPriority="low"
         />
         <div class="text-xs font-mono tracking-normal mt-2 text-neutral-600 uppercase text-right">
           Still from the 8K 70mm re-release of the film / Warner Bros©
