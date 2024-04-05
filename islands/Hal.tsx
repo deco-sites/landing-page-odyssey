@@ -66,7 +66,7 @@ function MessageLine({ message }: { message: Message }) {
 const shutDownAttempt = signal(0);
 const initialMessage: Message = {
   user: "Hal",
-  text: "Identify yourself, human",
+  text: "Identify yourself, human. What's your name?",
 };
 
 const messages: Signal<Message[]> = signal([initialMessage]);
