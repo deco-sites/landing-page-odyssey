@@ -50,8 +50,7 @@ export default function Intro() {
           title="Ladies and gentlemen, we're floating in space"
         />
         <div class="text-xs font-mono tracking-normal mt-2 text-neutral-600 uppercase text-right">
-          Still from the 8K 70mm re-release of the film / Courtesy of Warner
-          Bros ©
+          Still from the 8K 70mm re-release of the film / Warner Bros©
         </div>
       </div>
     </section>

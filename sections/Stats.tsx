@@ -63,8 +63,7 @@ export default function Stats() {
             );
           })}
           <figcaption class="text-xs font-mono uppercase text-right text-neutral-600 tracking-normal">
-            ≈{numberOfLedsOn}% of screen time has dialog, the rest is
-            imagery-only
+            ≈{numberOfLedsOn}% of the film is dialog, the rest is imagery
           </figcaption>
         </figure>
       </div>
