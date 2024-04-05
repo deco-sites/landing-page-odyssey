@@ -81,7 +81,7 @@ function Console() {
     };
     messages.value = [...messages.value, answer];
     const utterance = new SpeechSynthesisUtterance();
-    utterance.rate = 0.4;
+    utterance.rate = 0.6;
     utterance.pitch = 0.2;
     utterance.text = answer.text;
     speechSynth.speak(utterance);

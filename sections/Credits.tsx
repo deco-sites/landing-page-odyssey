@@ -57,9 +57,10 @@ function joinNames(names: string[]) {
     </>
   ));
 }
+
 function Person({ title, names, cursor }: Person) {
   return (
-    <span class={cursor}>
+    <span class={`${cursor} flex md:inline flex-col mt-4 md:mt-0`}>
       <span class="text-[1.25rem] leading-none mr-1">{title}</span>
       <span class="text-[2.75rem] leading-none">{joinNames(names)}</span>
     </span>
