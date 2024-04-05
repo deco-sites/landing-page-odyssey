@@ -137,8 +137,8 @@ function Console() {
   };
   return (
     <label>
-      <div class="font-console uppercase text-[0.625rem] leading-relaxed flex flex-col h-full tracking-normal">
-        <div class="flex-grow flex-col-reverse flex overflow-scroll h-full gap-2 relative border-b border-neutral-600 pb-4">
+      <div class="font-console uppercase text-[0.625rem] leading-relaxed flex flex-col h-full tracking-normal relative">
+        <div class="flex-grow flex-col-reverse flex overflow-scroll h-full gap-2  border-b border-neutral-600 pb-4">
           <div
             class="top-0 left-0 right-0 h-14 bg-red-200 absolute"
             style={{
