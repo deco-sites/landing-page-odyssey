@@ -26,7 +26,7 @@ const people: Person[] = [
   },
   {
     title: "Powered by",
-    names: ["deco.cx", "deno", "fresh", "preact"],
+    names: ["deco.cx", "fresh", "deno", "preact"],
     cursor: "cursor-tubes",
   },
   {
