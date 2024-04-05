@@ -51,7 +51,7 @@ export default function Hero() {
       }
       <div class="h-[440vh] bg-[#040200]">
         <img
-          src="/space.jpg"
+          src="/space-optimized.jpg"
           alt="Outer space, far above the world. Planet earth is blue and there's nothing we can do."
           class="fixed w-screen h-screen object-cover"
         />
