@@ -1,26 +1,8 @@
-import { ComponentType } from "preact";
-
-const rectStyle = "h-20 w-full";
-
-function On() {
-  return (
-    <div
-      class={`bg-[#FCDCAD] ${rectStyle}`}
-      style={{
-        boxShadow:
-          `0 0 6px 2px rgba(234, 62, 59, 1), inset 0 0 4px 2px rgba(234, 62, 59, 1)`,
-      }}
-    />
-  );
-}
-
-function Off() {
-  return <div class={`bg-[#FCDCAD] opacity-5 ${rectStyle}`} />;
-}
+import LED from "../islands/LED.tsx";
 
 // Split array into chunks
-const chunkArray = (array: ComponentType[], size: number) => {
-  return array.reduce((chunks: ComponentType[][], item, index) => {
+const chunkArray = (array: Array<boolean>, size: number) => {
+  return array.reduce((chunks: Array<Array<boolean>>, item, index) => {
     if (index % size === 0) {
       chunks.push([item]);
     } else {
@@ -33,8 +15,8 @@ const chunkArray = (array: ComponentType[], size: number) => {
 export default function Stats() {
   const numberOfLedsOn = 29;
   const leds = [
-    ...Array(numberOfLedsOn).fill(On),
-    ...Array(100 - numberOfLedsOn).fill(Off),
+    ...Array(numberOfLedsOn).fill(true),
+    ...Array(100 - numberOfLedsOn).fill(false),
   ];
   const chunksOfLeds = chunkArray(leds, 20);
   return (
@@ -73,10 +55,10 @@ export default function Stats() {
           data-aos="fade"
           class="col-span-12 md:col-span-5 flex flex-col gap-3"
         >
-          {chunksOfLeds.map((chunk: ComponentType[]) => {
+          {chunksOfLeds.map((chunk: boolean[]) => {
             return (
               <div class="flex gap-2">
-                {chunk.map((Element) => <Element />)}
+                {chunk.map((LEDProps) => <LED on={LEDProps} />)}
               </div>
             );
           })}

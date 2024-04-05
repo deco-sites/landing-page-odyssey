@@ -38,7 +38,8 @@ export default function Hero() {
 
   return (
     <>
-      <div class="fixed bg-white hidden">
+      {
+        /*<div class="fixed bg-white hidden">
         <div>{height}</div>
         <animated.div>
           {scrollY}
@@ -46,7 +47,8 @@ export default function Hero() {
         <animated.div>
           {scrollY.to((y) => y / height)}
         </animated.div>
-      </div>
+      </div>*/
+      }
       <div class="h-[440vh] bg-[#040200]">
         <img
           src="/space.jpg"

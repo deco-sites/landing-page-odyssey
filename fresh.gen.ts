@@ -7,6 +7,7 @@ import * as $AOSInitializer from "./islands/AOSInitializer.tsx";
 import * as $Gallery from "./islands/Gallery.tsx";
 import * as $Hal from "./islands/Hal.tsx";
 import * as $Hero from "./islands/Hero.tsx";
+import * as $LED from "./islands/LED.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -18,6 +19,7 @@ const manifest = {
     "./islands/Gallery.tsx": $Gallery,
     "./islands/Hal.tsx": $Hal,
     "./islands/Hero.tsx": $Hero,
+    "./islands/LED.tsx": $LED,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
